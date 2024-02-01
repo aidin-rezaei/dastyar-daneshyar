@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Name Filter Extension</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      width: 200px;
+      height: 300px;
+      background: rgb(2, 0, 36);
+      background: linear-gradient(56deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 18%, rgba(0, 212, 255, 1) 100%);
+      background-repeat: no-repeat;
+      background-size: cover;
+      padding: 10px;
+      font-size: 16px;
+      font-weight: bold;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      color: #fff;
+    }
+
+    textarea {
+      width: 100%;
+      border-radius: 10px;
+      background: #ffffff92;
+      padding: 4px;
+      margin: 4px 0;
+      font-size: 16px;
+      font-weight: bold;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      border: none;
+      outline: none;
+    }
+
+    ::placeholder {
+      color: #000;
+      opacity: 1;
+      font-size: 16px;
+      font-weight: bold;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      /* Firefox */
+    }
+
+    button {
+      width: 100%;
+      background: #fff;
+      padding: 2px;
+      border-radius: 4px;
+      font-size: 16px;
+      font-weight: bold;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      border: none;
+      outline: none;
+    }
+    p{
+      width: 100%;
+      padding: 4px 0;
+      text-align: left;
+    }
+    p a{
+      color: #4fb3ff;
+    }
+  </style>
+</head>
+
+<body dir="rtl">
+  <label for="nameInput">نام درس ها:</label>
+  <!-- <input type="text" id="nameInput" > -->
+  <textarea id="nameInput" placeholder="مثال:ریاضی,گسسته,ورزش" cols="30" rows="10"></textarea>
+  <button id="filterButton">اعمال فیلتر</button>
+  <p>power by <a href="https://aidinr.ir">aidinr.ir</a></p>
+  <script src="popup.js"></script>
+</body>
+
+</html>
