@@ -4,8 +4,7 @@
     "version": "1.0",
     "description": "با این ابزار میتوانید در بخش درس های ارائه شده در سایت آموزشیار فقط درس هایی خود را بصورت لیست در جدول ببینید",
     "permissions": [
-      "activeTab",
-      "scripting"
+      "activeTab"
   ],
     "browser_action": {
 
