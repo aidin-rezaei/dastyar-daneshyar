@@ -14,7 +14,7 @@
 
     body {
       width: 200px;
-      height: 320px;
+      /* height: 320px; */
       background: rgb(2, 0, 36);
       background: linear-gradient(56deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 18%, rgba(0, 212, 255, 1) 100%);
       background-repeat: no-repeat;
@@ -67,14 +67,42 @@
     p a{
       color: #4fb3ff;
     }
+    body{
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    #loadTime{
+      width: 100%;
+      font-size: 12px;
+      color: #fff;
+      text-align: right;
+    }
+    #loadTime p{
+      text-align: right;
+    }
+    .red{
+      color: rgb(255, 0, 0);
+    }
+    .green{
+      color: rgb(0, 255, 0);
+    }
+    .flex{
+      gap: 4px;
+      display: flex;
+    }
   </style>
 </head>
 
 <body dir="rtl">
-  <button id="toggleButton">Dark Mode</button>
+  <div id="loadTime"></div>
+  <div class="flex">
+    <button id="">ارزیابی اساتید</button>
+    <button id="toggleButton">Dark Mode</button>
+
+  </div>
   <label for="nameInput">نام درس ها:</label>
-  <!-- <input type="text" id="nameInput" > -->
-  <textarea id="nameInput" placeholder="مثال:ریاضی,گسسته,ورزش" cols="30" rows="10"></textarea>
+  <textarea id="nameInput" placeholder="مثال:ریاضی,گسسته,ورزش" cols="10" rows="5"></textarea>
   <button id="filterButton">اعمال فیلتر</button>
   <p>power by <a href="https://aidinr.ir">aidinr.ir</a></p>
   <script src="popup.js"></script>

@@ -94,27 +94,22 @@ function enableDarkMode() {
     background-color: #564a4a !important;
 
   }
+
+  .datagrid tbody td {
+    border: 1px solid #000 !important;
+  }
   `;
-  // #maincontent .heading,#maincontent .heading .user-menu,#menuFrame body ,
 
   darkModeStyle.appendChild(document.createTextNode(darkModeCSS));
 
   document.head.appendChild(darkModeStyle);
 
-  // document.body.style.backgroundColor = '#333';
-  // document.body.style.color = '#fff';
-  // var loginTable = document.querySelector('#loginTable');
-  // var loginTable_span = document.querySelector('#loginTable #text1');
-  // loginTable.style.backgroundColor = '#333';
-  // loginTable_span.style.color = '#fff';
 }
 
 document.addEventListener('click', function (event) {
   var clickedElement = event.target;
 
-  // اگر کلیک روی یک لینک منو باشد
   if (isMenuLink(clickedElement)) {
-    // تغییر مسیر سایت و اعمال حالت دارک مود
     window.location.href = clickedElement.getAttribute('href');
     enableDarkMode();
   }
@@ -122,8 +117,11 @@ document.addEventListener('click', function (event) {
 
 
 chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
+  if (request.action === 'getLoadTime') {
+    var loadTime = window.performance.timing.loadEventEnd - window.performance.timing.navigationStart;
+    sendResponse({ loadTime: loadTime });
+  }
   if (request.action === 'toggleDarkMode') {
-    // اگر افزونه درخواست فعال یا غیرفعال کردن حالت دارک مود داشته باشد
     if (request.enable) {
       enableDarkMode();
     } else {
